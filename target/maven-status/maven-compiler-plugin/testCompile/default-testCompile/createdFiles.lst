@@ -1,0 +1,4 @@
+execution\AmazonRunner.class
+execution\HomePageSteps.class
+execution\MyAppHooks.class
+execution\AmazonFailedRunner.class
