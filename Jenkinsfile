@@ -17,7 +17,7 @@ pipeline {
     
                 stage('Execute test cases on Chrome Browser') {
             steps {
-                bat 'docker-compose up cucumber-tests-Firefox'
+                bat 'docker-compose up cucumber-tests-chrome'
             }
             
             post { 
