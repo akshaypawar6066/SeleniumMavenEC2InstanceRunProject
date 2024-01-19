@@ -12,6 +12,9 @@ COPY pom.xml  /home/SeleniumCucumberTestFramework/pom.xml
 
 COPY testng.xml  /home/SeleniumCucumberTestFramework/testng.xml
 
+#Copy reports
+COPY test-output /home/SeleniumCucumberTestFramework/test-output
+
 #Copy runner file
 COPY runner.sh runner.sh
 

@@ -9,7 +9,8 @@ import io.cucumber.testng.CucumberOptions;
 		features = {"classpath:execution"},
 		glue= {"execution"},
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		publish = true
+		publish = true,
+		tags = "@Smoke"
 		
 		)
 public class AmazonRunner extends AbstractTestNGCucumberTests {

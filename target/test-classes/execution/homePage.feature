@@ -15,7 +15,7 @@ Given User is at landing page
 When User click on smart phones deal
 Then deal section should get open
 
-
+@Smoke
 Scenario: Login to application
 Given User is at landing page
 When User enters the username as "8369038453" and clicks on continue button

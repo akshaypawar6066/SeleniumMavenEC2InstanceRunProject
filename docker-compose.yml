@@ -28,11 +28,20 @@ services:
 
   cucumber-tests-chrome:
     image: entireframeworkimage:latest
-    environment:
-      - SE_EVENT_BUS_HOST=hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - browser=Firefox
     depends_on:
       - hub
+    environment:
+      - browser=Chrome
+    volumes:
+       - ./htmlReportsChrome:/home/SeleniumCucumberTestFramework/test-output
+
+  cucumber-tests-Firefox:
+    image: entireframeworkimage:latest
+    depends_on:
+      - hub
+    environment:
+      - browser=Firefox
+    volumes:
+       - ./htmlReportsFirefox:/home/SeleniumCucumberTestFramework/test-output
+
       

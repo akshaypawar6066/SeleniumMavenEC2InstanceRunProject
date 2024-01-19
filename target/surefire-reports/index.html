@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Admin\eclipse-workspace\SeleniumMavenDockerStandaloneChrome\testng.xml</span>
+                    <span>C:\Users\Admin\eclipse-workspace\SeleniumMavenDockerInfraProject\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,12 +103,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="execution.AmazonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login to application&quot;, &quot;Home page functionality&quot;)">runScenario("Login to application", "Home page functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="execution.AmazonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Checkout the deals section&quot;, &quot;Home page functionality&quot;)">runScenario("Checkout the deals section", "Home page functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="execution.AmazonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Checkout the deals section&quot;, &quot;Home page functionality&quot;)">runScenario("Checkout the deals section", "Home page functionality")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="execution.AmazonRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login to application&quot;, &quot;Home page functionality&quot;)">runScenario("Login to application", "Home page functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -150,25 +150,25 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login to application&quot;, &quot;Home page functionality&quot;)">
-                  </a> <!-- runScenario("Login to application", "Home page functionality") -->
+                  <a name="runScenario(&quot;Checkout the deals section&quot;, &quot;Home page functionality&quot;)">
+                  </a> <!-- runScenario("Checkout the deals section", "Home page functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login to application","Home page functionality")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@id=&apos;nav-link-accountList-nav-line-1&apos;]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+                  <span class="parameters">("Checkout the deals section","Home page functionality")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[@class=&apos;a-carousel-card&apos;]//img[@alt = &apos;op&apos;])[1]&apos; (tried for 60 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at pages.HomePage.checkUserIsAbleToSignIn(HomePage.java:101)
-	at execution.HomePageSteps.user_should_get_signed_in_succesfully(HomePageSteps.java:62)
-	at ✽.User should get SignedIn succesfully(classpath:execution/homePage.feature:23)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;nav-link-accountList-nav-line-1&apos;]&quot;}
+	at pages.HomePage.enterDealsSection(HomePage.java:66)
+	at execution.HomePageSteps.user_click_on_smart_phones_deal(HomePageSteps.java:38)
+	at ✽.User click on smart phones deal(classpath:execution/homePage.feature:15)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[@class=&apos;a-carousel-card&apos;]//img[@alt = &apos;op&apos;])[1]&quot;}
   (Session info: chrome=120.0.6099.109)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [28be8d8d42a068c94cfce9c3f752274c, findElement {using=xpath, value=//span[@id=&apos;nav-link-accountList-nav-line-1&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 120.0.6099.109, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 28be8d8d42a068c94cfce9c3f752274c
+Command: [738dd26ad747964c5272dbd8808e9934, findElement {using=xpath, value=(//*[@class=&apos;a-carousel-card&apos;]//img[@alt = &apos;op&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38785}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.19.0.5:4444/sessio..., se:cdpVersion: 120.0.6099.109, se:vnc: ws://172.19.0.5:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.19.0.5:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 738dd26ad747964c5272dbd8808e9934
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -186,8 +186,8 @@ Session ID: 28be8d8d42a068c94cfce9c3f752274c
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-	at pages.HomePage.checkUserIsAbleToSignIn(HomePage.java:101)
-	at execution.HomePageSteps.user_should_get_signed_in_succesfully(HomePageSteps.java:62)
+	at pages.HomePage.enterDealsSection(HomePage.java:66)
+	at execution.HomePageSteps.user_click_on_smart_phones_deal(HomePageSteps.java:38)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
 	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
 	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
@@ -215,25 +215,25 @@ Session ID: 28be8d8d42a068c94cfce9c3f752274c
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Checkout the deals section&quot;, &quot;Home page functionality&quot;)">
-                  </a> <!-- runScenario("Checkout the deals section", "Home page functionality") -->
+                  <a name="runScenario(&quot;Login to application&quot;, &quot;Home page functionality&quot;)">
+                  </a> <!-- runScenario("Login to application", "Home page functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Checkout the deals section","Home page functionality")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[@class=&apos;a-carousel-card&apos;]//img[@alt = &apos;op&apos;])[1]&apos; (tried for 60 second(s) with 500 milliseconds interval)
+                  <span class="parameters">("Login to application","Home page functionality")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@id=&apos;nav-link-accountList-nav-line-1&apos;]&apos; (tried for 60 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at pages.HomePage.enterDealsSection(HomePage.java:66)
-	at execution.HomePageSteps.user_click_on_smart_phones_deal(HomePageSteps.java:38)
-	at ✽.User click on smart phones deal(classpath:execution/homePage.feature:15)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[@class=&apos;a-carousel-card&apos;]//img[@alt = &apos;op&apos;])[1]&quot;}
+	at pages.HomePage.checkUserIsAbleToSignIn(HomePage.java:101)
+	at execution.HomePageSteps.user_should_get_signed_in_succesfully(HomePageSteps.java:62)
+	at ✽.User should get SignedIn succesfully(classpath:execution/homePage.feature:23)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;nav-link-accountList-nav-line-1&apos;]&quot;}
   (Session info: chrome=120.0.6099.109)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [0a022649abc176ca96399093ca2662eb, findElement {using=xpath, value=(//*[@class=&apos;a-carousel-card&apos;]//img[@alt = &apos;op&apos;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 120.0.6099.109, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0a022649abc176ca96399093ca2662eb
+Command: [7ef9d26883ccf871b4b25bab2fee97e4, findElement {using=xpath, value=//span[@id=&apos;nav-link-accountList-nav-line-1&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.19.0.5:4444/sessio..., se:cdpVersion: 120.0.6099.109, se:vnc: ws://172.19.0.5:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.19.0.5:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ef9d26883ccf871b4b25bab2fee97e4
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -251,8 +251,8 @@ Session ID: 0a022649abc176ca96399093ca2662eb
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-	at pages.HomePage.enterDealsSection(HomePage.java:66)
-	at execution.HomePageSteps.user_click_on_smart_phones_deal(HomePageSteps.java:38)
+	at pages.HomePage.checkUserIsAbleToSignIn(HomePage.java:101)
+	at execution.HomePageSteps.user_should_get_signed_in_succesfully(HomePageSteps.java:62)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
 	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
 	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
@@ -311,7 +311,7 @@ Session ID: 0a022649abc176ca96399093ca2662eb
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Admin\eclipse-workspace\SeleniumMavenDockerStandaloneChrome\testng.xml</span>
+            <span class="header-content">C:\Users\Admin\eclipse-workspace\SeleniumMavenDockerInfraProject\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -372,19 +372,19 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'execution.AmazonRunner')
-data.setCell(0, 3, 72537);
+data.setCell(0, 3, 69688);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'execution.AmazonRunner')
-data.setCell(1, 3, 67335);
+data.setCell(1, 3, 63916);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'execution.AmazonRunner')
-data.setCell(2, 3, 7258);
+data.setCell(2, 3, 8393);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'execution.AmazonRunner')
-data.setCell(3, 3, 7150);
+data.setCell(3, 3, 3827);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -417,32 +417,32 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">execution.AmazonRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@51dbed72)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@75dbe490)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("validation of title", "Home page functionality")</span>
-                <span class="method-start">658 ms</span>
+                <span class="method-start">1477 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("verify cart icon", "Home page functionality")</span>
-                <span class="method-start">7810 ms</span>
+                <span class="method-start">9873 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Checkout the deals section", "Home page functionality")</span>
-                <span class="method-start">15068 ms</span>
+                <span class="method-start">13701 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Login to application", "Home page functionality")</span>
-                <span class="method-start">82406 ms</span>
+                <span class="method-start">77621 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">154947 ms</span>
+                <span class="method-start">147318 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
