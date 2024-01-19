@@ -27,7 +27,7 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
 
   cucumber-tests-chrome:
-    image: entireframeworkimage:latest
+    image: seleniumjenkinsdockerimage:latest
     depends_on:
       - hub
     environment:
@@ -42,6 +42,7 @@ services:
     environment:
       - browser=Firefox
     volumes:
-       - ./htmlReportsFirefox:/home/SeleniumCucumberTestFramework/test-output
+      - ./htmlReportsChrome/SparkReport/index.html:/home/SeleniumCucumberTestFramework/test-output/SparkReport/index.html
+
 
       
