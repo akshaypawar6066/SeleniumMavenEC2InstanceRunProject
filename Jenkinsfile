@@ -2,22 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Creating Image') {
-            steps {
-               bat "docker build -t=seleniumjenkinsdockerimage ."
-            }
-        }
-        
                 stage('Starting Selenium Grid') {
             steps {
-                bat 'docker-compose up -d hub chrome firefox'
+                sh 'docker-compose up -d hub chrome firefox'
             }
 
     }
     
                 stage('Execute test cases on Chrome Browser') {
             steps {
-                bat 'docker-compose up cucumber-tests-chrome'
+                sh 'mvn -Dmaven.test.failure.ignore=true test'
             }
             
             post { 
@@ -26,13 +20,18 @@ pipeline {
 <p>Please find the details below for the build execution.<br>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:<br>Check console output at $BUILD_URL to view the results.<br>
 
 Thanks!<br>
-Automation Team.''', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!-Customized E-mail Notification of Docker Based Project  Using Jenkins Pipeline On ChromeBrowser', to: 'akshaypawar6066@gmail.com'
+Automation Team.''', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!-Customized E-mail Notification of Docker Based Project  Using Jenkins Pipeline On ChromeBrowser and Exutes on EC2', to: 'akshaypawar6066@gmail.com'
         }
     }
     }
     
+        stage('Make Infra Down') {
+            steps {
+                sh 'docker-compose down'
+            }
+    
 }
 
-
+}
     
 }
