@@ -19,5 +19,5 @@ Then deal section should get open
 Scenario: Login to application
 Given User is at landing page
 When User enters the username as "8369038453" and clicks on continue button
-And User enters the password as "akshay6066" and clicks on signIn button
+And User enters the password as "Akshay@6066" and clicks on signIn button
 Then User should get SignedIn succesfully

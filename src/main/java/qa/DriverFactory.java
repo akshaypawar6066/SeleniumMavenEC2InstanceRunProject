@@ -2,6 +2,7 @@ package qa;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +30,7 @@ public class DriverFactory {
 		}
 
 		driver = new RemoteWebDriver(new URL("http://172.26.48.1:4444"), capabilities);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		return driver;
 
 	}
