@@ -16,7 +16,7 @@ pipeline {
             
             post { 
         always { 
-          emailext attachLog: true, attachmentsPattern: '/index.html', body: '''<h1> Hi Team,</h1> 
+          emailext attachLog: true, attachmentsPattern:'test-output/SparkReport/index.html', body: '''<h1> Hi Team,</h1> 
 <p>Please find the details below for the build execution.<br>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:<br>Check console output at $BUILD_URL to view the results.<br>
 
 Thanks!<br>
