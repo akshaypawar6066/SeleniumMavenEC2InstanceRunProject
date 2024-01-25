@@ -29,7 +29,7 @@ public class DriverFactory {
 			capabilities = new FirefoxOptions();
 		}
 
-		driver = new RemoteWebDriver(new URL("http://3.109.60.108:4444/wd/hub"), capabilities);
+		driver = new RemoteWebDriver(new URL("http://43.204.232.104:4444/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		return driver;
 
